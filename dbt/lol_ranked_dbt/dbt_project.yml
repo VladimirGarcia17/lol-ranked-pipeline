@@ -1,0 +1,27 @@
+name: 'lol_ranked_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'lol_ranked_dbt'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  lol_ranked_dbt:
+    staging:
+      +schema: staging
+      +materialized: view
+      +database: lol_ranked
+    marts:
+      +schema: analytics
+      +materialized: table
+      +database: lol_ranked
