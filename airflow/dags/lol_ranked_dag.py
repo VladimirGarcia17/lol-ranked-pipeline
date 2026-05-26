@@ -25,7 +25,7 @@ with DAG(
     # Extract Solo/Duo Ranked matches
     def run_extraction():
         from extraction.riot_extractor import extract_matches_for_player
-        extract_matches_for_player("Osiris", "1011", match_count=20)
+        extract_matches_for_player("Osiris", "1011", match_count=50)
 
     extract_task = PythonOperator(
         task_id='extract_matches',

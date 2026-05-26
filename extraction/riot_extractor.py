@@ -74,4 +74,4 @@ def extract_matches_for_player(game_name: str, tag_line: str, match_count: int =
 
 #Entry point
 if __name__ == "__main__":
-    extract_matches_for_player("Osiris", "1011", match_count=20)    
+    extract_matches_for_player("Osiris", "1011", match_count=50)    
